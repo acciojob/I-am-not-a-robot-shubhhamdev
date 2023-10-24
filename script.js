@@ -24,10 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const clickedImage = event.target;
         const clickedClass = clickedImage.classList[0];
 
-        if (selectedImages.length === 2) {
-            return; // Two images already selected
-        }
-
         if (selectedImages.includes(clickedClass)) {
             return; // Same image clicked again
         }
@@ -40,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             gameState = 3;
         }
 
-        if (selectedImages.length >= 2) {
+        if (selectedImages.length >= 1) {
             resetButton.style.display = "block";
             gameState = 2;
         }
